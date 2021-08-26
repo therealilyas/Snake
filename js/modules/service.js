@@ -1,4 +1,5 @@
 import DOM from './dom.js';
+import EVENT from './event.js';
 
 function direction(e) {
 
@@ -81,9 +82,16 @@ function startGame() {
         x: Math.floor(Math.random() * 17 + 1) * DOM.box,
         y: Math.floor(Math.random() * 15 + 3) * DOM.box
     }
-
+    setupDOMListeners()
 }
 
+function setupDOMListeners() {
+
+    EVENT.easy;
+    EVENT.normal;
+    EVENT.hard;
+    EVENT.restart;
+}
 
 function gameOver() {
     DOM.gameOverBox.style.display = 'flex';

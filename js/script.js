@@ -1,5 +1,6 @@
 import { startGame } from '../js/modules/service.js'
 import DOM from '../js/modules/dom.js';
+import EVENT from '../js/modules/event.js'
 
 
 init();
@@ -17,4 +18,8 @@ function init() {
         x: Math.floor(Math.random() * 17 + 1) * DOM.box,
         y: Math.floor(Math.random() * 15 + 3) * DOM.box
     }
+    EVENT.easy;
+    EVENT.normal;
+    EVENT.hard;
+    EVENT.restart;
 }

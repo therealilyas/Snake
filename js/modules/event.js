@@ -1,4 +1,4 @@
-import DOM from '../modules/dom.js';
+import DOM from './dom.js';
 import {
     direction,
     getLevelGame,

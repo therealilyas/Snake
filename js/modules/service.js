@@ -69,9 +69,12 @@ function drawGame() {
 
 
 function startGame() {
-    document.body.style.background = 'black';
-    DOM.startGameBox.style.display = 'flex';
+    startGameStyle()
+    startGameInit()
+    setupDOMListeners()
+}
 
+function startGameInit() {
     DOM.dir = '';
     DOM.snake = [];
     DOM.snake[0] = {
@@ -82,7 +85,11 @@ function startGame() {
         x: Math.floor(Math.random() * 17 + 1) * DOM.box,
         y: Math.floor(Math.random() * 15 + 3) * DOM.box
     }
-    setupDOMListeners()
+}
+
+function startGameStyle() {
+    document.body.style.background = 'black';
+    DOM.startGameBox.style.display = 'flex';
 }
 
 function setupDOMListeners() {
@@ -108,20 +115,9 @@ function getLevelGame(lvl) {
 
 
 function restartGame() {
-    clearInterval(DOM.game);
     DOM.gameOverBox.style.display = 'none';
-    DOM.score = 0;
-    DOM.dir = '';
-    DOM.snake = [];
-    DOM.snake[0] = {
-        x: 9 * DOM.box,
-        y: 10 * DOM.box
-    }
-    DOM.food = {
-        x: Math.floor(Math.random() * 17 + 1) * DOM.box,
-        y: Math.floor(Math.random() * 15 + 3) * DOM.box
-    }
-
+    clearInterval(DOM.game);
+    startGameInit()
     drawGame();
     DOM.game = setInterval(drawGame, DOM.speed);
 }

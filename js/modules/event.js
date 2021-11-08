@@ -15,12 +15,10 @@ document.addEventListener('keydown', (e) => {
 
 let easy = DOM.easyBtn.addEventListener('click', () => {
     getLevelGame(200);
-
 });
 
 let normal = DOM.normalBtn.addEventListener('click', () => {
     getLevelGame(100);
-
 });
 
 let hard = DOM.hardBtn.addEventListener('click', () => {

@@ -66,7 +66,7 @@ function drawGame() {
     DOM.snake.unshift(newHead)
 
 }
-
+r
 
 function startGame() {
     startGameStyle()
@@ -77,6 +77,7 @@ function startGame() {
 function startGameInit() {
     DOM.dir = '';
     DOM.snake = [];
+    DOM.score = 0;
     DOM.snake[0] = {
         x: 9 * DOM.box,
         y: 10 * DOM.box

@@ -67,7 +67,6 @@ function drawGame() {
 
 }
 
-
 function startGame() {
     startGameStyle()
     startGameInit()

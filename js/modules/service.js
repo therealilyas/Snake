@@ -66,7 +66,7 @@ function drawGame() {
     DOM.snake.unshift(newHead)
 
 }
-r
+
 
 function startGame() {
     startGameStyle()
